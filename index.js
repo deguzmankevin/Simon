@@ -21,7 +21,8 @@ var strict = false;
   });
   $("#score").html(count);
   $("#strict").click(function() {
-    $(this).toggleClass('clicked'); 
+    
+//    $(this).toggleClass('clicked'); 
     if (!strict) {
     
     strict = true;
