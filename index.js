@@ -1,3 +1,4 @@
+
   //prep board
 var nums = [0, 1, 2, 3];
 var map = {0: "red", 1: "blue", 
@@ -18,7 +19,7 @@ var strict = false;
    newGame();
     $("#start").trigger('click');
   });
-  $("#screen").html(count);
+  $("#score").html(count);
   $("#strict").click(function() {
     $(this).toggleClass('clicked'); 
     if (!strict) {
@@ -35,13 +36,17 @@ var strict = false;
   //start process
    $("#start").click(function() {
     $("#start").hide();
-      
+    
+      $.blockUI.defaults.overlayCSS.opacity = 0.0; 
+      $.blockUI.defaults.overlayCSS.cursor = 'default'; 
+          $.blockUI.defaults.message = null;
+
        showSequence(newnum);     
   });
   function showSequence(bool) {
        i = 0;     
        count++;
-     $("#screen").html(count);
+     $("#score").html(count);
     if(bool) {
           var rand = nums[Math.floor(Math.random()*nums.length)];
           gameSequence.push(rand);
@@ -57,10 +62,12 @@ var strict = false;
               }, 300);
          
         if (i >= count) {
+           $.unblockUI();
           clearInterval(sequence);
         }
       }, 1000); 
     resetPlayer();
+    $.blockUI();
   }
  
   
@@ -118,7 +125,7 @@ function playerTurn(id) {
   // }
         else {
           setTimeout(function(){
-             alert('nice');
+             
           }, 200);
          
            streak = 0;
