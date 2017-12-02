@@ -1,8 +1,11 @@
 
   //prep board
 var nums = [0, 1, 2, 3];
-var map = {0: "red", 1: "blue", 
+var map = {0: "darkred", 1: "darkblue", 
+           2: "gold", 3: "darkgreen"};
+var map1 = {0: "red", 1: "blue", 
            2: "yellow", 3: "green"};
+var switchCol = {"yellow": "gold", "green": "darkgreen", "blue": "darkblue", "red": "darkred"};
 var reversemap = {"red": 0, "blue": 1, 
                  "yellow": 2, "green": 3};
 var soundMap =  {"red": "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3", "blue": "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3", 
@@ -53,13 +56,14 @@ var strict = false;
           gameSequence.push(rand);
         }
         var sequence = setInterval(function() { 
-        var color = map[gameSequence[i]];
+        var color = map1[gameSequence[i]];
+        var switchColor = map[gameSequence[i]];
         i++;
-        $("#" + color).css("background-color", color);
+        $("#" + color).css("background-color", switchColor);
           playSound(color);
         setTimeout(function(){
           
-         $("#" + color).css("background-color", "white");   
+         $("#" + color).css("background-color", color);   
               }, 300);
          
         if (i >= count) {
@@ -104,9 +108,10 @@ function playerTurn(id) {
   
   }
   else {
-    $("#" + id).css('background-color', id);
+    var switchColor = switchCol[id];
+    $("#" + id).css('background-color', switchColor);
     setTimeout(function(){
-      $("#" + id).css('background-color', "white");
+      $("#" + id).css('background-color', id);
     }, 200);
     
     newnum = true;

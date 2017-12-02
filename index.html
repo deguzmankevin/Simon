@@ -4,25 +4,30 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="index.css">
 <title>Simon Game!</title>
 <div id="whole">
   <h1>The Simon Game</h1>
+  <button type="button" class="btn btn-primary btn-lg" id='start'>Start</button>
 <div id="box">
   <div id='colors'>
-  <button id="red" onClick="addToPlayerSequence(this.id)" style="border-color: red"></button>
-   <button id="blue" onClick="addToPlayerSequence(this.id)"style="border-color: blue"></button>
-    <button id="yellow" onClick="addToPlayerSequence(this.id)"style="border-color: yellow"></button>
-   <button id="green" onClick="addToPlayerSequence(this.id)"style="border-color: green"></button>  
+  <button id="red" onClick="addToPlayerSequence(this.id)" style="background-color: red"></button>
+   <button id="blue" onClick="addToPlayerSequence(this.id)"style="background-color: blue"></button>
+    <button id="yellow" onClick="addToPlayerSequence(this.id)"style="background-color: yellow"></button>
+   <button id="green" onClick="addToPlayerSequence(this.id)"style="background-color: green"></button>  
   </div>
-  <div id="screen">
-    Score:<div id='score'></div>
-  <button id='start'>Start</button>
-Strict<label class="switch" >
+  
+  <div class='container'id="screen">
+   
+ <div id='strictmode'> Strict Mode<label class="switch" >
   <input type="checkbox"id='strict'>
   <span class="slider round"></span>
-</label>
-<button id='reset'>Reset</button>
+   
+</label></div>
+
+    <div id='score'></div>
+<button type="button" class="btn btn-primary btn-lg"id='reset'>Reset</button>
       </div>
 </div>
 
