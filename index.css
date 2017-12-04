@@ -1,13 +1,46 @@
 #colors button{
-  width:23.9%;
+  width:24.2%;
   height:150px;
 
   background-color: white;
 }
+body {
+  background-color: black;
+}
 #whole{
   position: absolute;
-  top:10%;
+  top:20%;
   left: 38%;
+}
+h1 {
+  color: ghostwhite;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  color: ghostwhite;
+}
+#directions, li {
+  color: ghostwhite;
+  font-size: 13px;
+  
+}
+#directions {
+  position: absolute;
+  right: 150%;
+  top: 15%;
+  width: 250px;
+  height: 200px;
+}
+#tips {
+  position: absolute;
+  left: 140%;
+  top: 15%;
+  width: 250px;
+  height: 200px;
+}
+#start {
+  margin-left: 40%;
 }
 .container {
   font-size: 15px;
@@ -24,10 +57,12 @@
  
 }
 #score {
-  font-size: 40px;
-  margin-left: -20px;
+  font-size: 50px;
+  left: 45.5%;
+  position:absolute;
 }
 #reset {
+  position: absolute;
   margin-left: 45px;
   margin-top: 30px;
 }

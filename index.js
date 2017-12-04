@@ -50,6 +50,9 @@ var strict = false;
   function showSequence(bool) {
        i = 0;     
        count++;
+    if (count > 9) {
+      $('#score').css('left', '41%');
+    }
      $("#score").html(count);
     if(bool) {
           var rand = nums[Math.floor(Math.random()*nums.length)];
