@@ -8,18 +8,31 @@
   position: absolute;
   top:10%;
   left: 38%;
-  
- 
-
 }
 .container {
-font-size: 15px;
-position:relative;
-float: left;
+  font-size: 15px;
+  margin-top: 5%;
   
 }
+.switch {
+  position:relative; 
+  top: 50px;
+  right: 70px;
+}
 #strictmode, #score, #reset {
-  float: left;
+ float: left;
+ 
+}
+#score {
+  font-size: 40px;
+  margin-left: -20px;
+}
+#reset {
+  margin-left: 45px;
+  margin-top: 30px;
+}
+#strictmode {
+  margin-top: -20px;
 }
 
 #box {
